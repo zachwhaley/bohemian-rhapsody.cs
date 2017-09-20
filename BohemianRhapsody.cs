@@ -61,11 +61,11 @@ namespace queen
         {
             if (life == Life.Real)
             {
-                System.Console.WriteLine("Is this the real life?");
+                Console.WriteLine("Is this the real life?");
             }
             if (life == Life.Fantasy)
             {
-                System.Console.WriteLine("Is this just fantasy?");
+                Console.WriteLine("Is this just fantasy?");
                 throw new LandSlideException();
             }
         }
