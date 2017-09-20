@@ -27,10 +27,11 @@ namespace queen
 
     struct Difficulty
     {
-        public int Value { get; set; }
         public static int Easy = 0;
         public static int EasyGo = 1;
         public static int EasyCome = 2;
+
+        public int Value { get; set; }
 
         public static bool operator ==(Difficulty difficulty, int value)
         {
@@ -54,9 +55,10 @@ namespace queen
 
     struct Mood
     {
-        public string Value { get; set; }
         public static string High = "high";
         public static string Low = "low";
+
+        public string Value { get; set; }
 
         public static bool operator <(Mood mood, double value)
         {
