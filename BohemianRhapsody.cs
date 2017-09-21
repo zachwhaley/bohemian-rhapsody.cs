@@ -185,19 +185,19 @@ namespace queen
 
     class Character
     {
-        public List<Eye> Eyes { get; set; } = new List<Eye> { new Eye() };
+        public List<Eye> Eyes { get; } = new List<Eye> { new Eye() };
     }
 
     class Wind
     {
-        private Direction direction;
-
         public Direction Direction
         {
             get
             {
                 Console.Write("Any way the wind blows ");
-                return direction;
+                var directions = Enum.GetValues(typeof(Direction));
+                int anyway = new Random().Next(directions.Length);
+                return (Direction)directions.GetValue(anyway);
             }
         }
     }
