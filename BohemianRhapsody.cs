@@ -221,7 +221,7 @@ namespace queen
 
         public Eye Orient(Direction direction)
         {
-            string orientation = Direction.Sky == direction ? "skies" : "ground";
+            string orientation = direction == Direction.Sky ? "skies" : "ground";
             Console.Write("Look up to the {0} ", orientation);
             return this;
         }
